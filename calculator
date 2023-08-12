@@ -1,0 +1,73 @@
+<html>
+    <head>
+      <script>
+        var a="";
+        function change(val){
+            a+=val;
+            if(val=="+"||val=="-"||val=="*"||val=="/"){
+                var w=val;
+            }
+            else{
+                var r=val;
+                document.getElementById("box").value=r;
+            }
+        }
+        function remove(){
+        document.getElementById("box").value=" ";
+        a="";
+        }
+        function ans(){
+            var q=document.getElementById("box").value;
+            var p=eval(a);
+            document.getElementById("box").value=p;
+        }
+      </script>
+        <style>
+            .container{
+                width: 280px;
+                height: 340px;
+                background-color: black;
+          border-radius:4px;
+            }
+            button{
+                background-color: black;
+                color: white;
+                width: 55px;
+                height: 60px;
+          margin-top:10px;
+          margin-left:9px;
+          border-width:1px;
+          border-color:white;
+          border-radius:4px;
+          font-size:20px;
+            }
+          input{
+              margin-top:10px;
+          	  margin-left:14px;
+          width:240px;
+          height:35px;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <input type="text" id="box"><br>
+            <button onclick="change('1')">1</button>
+            <button onclick="change('2')">2</button>
+            <button onclick="change('3')">3</button>
+            <button onclick="remove()" style="background-color:red">c</button><br>
+            <button onclick="change('4')">4</button>
+            <button onclick="change('5')">5</button>
+            <button onclick="change('6')">6</button>
+            <button onclick="change('+')">+</button><br>
+            <button onclick="change('7')">7</button>
+            <button onclick="change('8')">8</button>
+            <button onclick="change('9')">9</button>
+            <button onclick="change('-')">-</button><br>
+            <button onclick="change('0')">0</button>
+            <button onclick="change('/')">/</button>
+            <button onclick="change('*')">*</button>
+            <button onclick="ans()" style="background-color:yellow; color:black; font-size:24px">=</button>
+        </div>
+    </body>
+</html>
