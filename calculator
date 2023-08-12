@@ -1,16 +1,8 @@
 <html>
     <head>
       <script>
-        var a="";
         function change(val){
-            a+=val;
-            if(val=="+"||val=="-"||val=="*"||val=="/"){
-                var w=val;
-            }
-            else{
-                var r=val;
-                document.getElementById("box").value=r;
-            }
+            document.getElementById("box").value+=val;
         }
         function remove(){
         document.getElementById("box").value=" ";
